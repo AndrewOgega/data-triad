@@ -8,3 +8,5 @@ def fetch_data(url):
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
         return None
+    
+#vbbbsbbsbbbs
