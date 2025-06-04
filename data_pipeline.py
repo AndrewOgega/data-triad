@@ -5,19 +5,16 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 from pydantic_settings import BaseSettings
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 class Settings(BaseSettings):
     BQ_KEY: str
 
     class Config:
         env_file = ".env"
-
-
-settings = Settings()
-
-credentials = service_account.Credentials.from_service_account_file(settings.BQ_KEY)
-
-client = bigquery.Client(credentials=credentials, project=credentials.project_id)
 
 
 def load_credit_data() -> pd.DataFrame:
@@ -32,7 +29,14 @@ def load_credit_data() -> pd.DataFrame:
     )
 
     # TODO could have used a fucntion for this one.
-    try:
+
+    try: 
+        settings = Settings()
+
+        credentials = service_account.Credentials.from_service_account_file(settings.BQ_KEY)
+
+        client = bigquery.Client(credentials=credentials, project=credentials.project_id)
+
         logging.info("Attempting to load data from BigQuery...")
 
         df: pd.DataFrame = (
@@ -52,7 +56,7 @@ def load_credit_data() -> pd.DataFrame:
         logging.warning(f"Failed to load from BigQuery. Reason: {e}")
         logging.info("Loading data from local CSV instead...")
 
-        df: pd.DataFrame = pd.read_csv("credit_card_default.csv")
+        df: pd.DataFrame = pd.read_csv("credit_card_default.csv").set_index("id")
 
     # TODO handle for missing .csv file
 
