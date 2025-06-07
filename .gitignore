@@ -141,3 +141,6 @@ dmypy.json
 
 # IDE - VSCode
 .vscode/*
+
+# catboost info folder
+catboost_info/

@@ -30,12 +30,16 @@ def load_credit_data() -> pd.DataFrame:
 
     # TODO could have used a fucntion for this one.
 
-    try: 
+    try:
         settings = Settings()
 
-        credentials = service_account.Credentials.from_service_account_file(settings.BQ_KEY)
+        credentials = service_account.Credentials.from_service_account_file(
+            settings.BQ_KEY
+        )
 
-        client = bigquery.Client(credentials=credentials, project=credentials.project_id)
+        client = bigquery.Client(
+            credentials=credentials, project=credentials.project_id
+        )
 
         logging.info("Attempting to load data from BigQuery...")
 
@@ -59,6 +63,5 @@ def load_credit_data() -> pd.DataFrame:
         df: pd.DataFrame = pd.read_csv("credit_card_default.csv").set_index("id")
 
     # TODO handle for missing .csv file
-
 
     return df
