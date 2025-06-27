@@ -1,10 +1,10 @@
 # Credit Card Default Prediction
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-enabled-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-00e9ed?logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-e06666?logo=streamlit)
+![Docker](https://img.shields.io/badge/Docker-8cc1f0?logo=docker)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ML-brightgreen)
 
 ---
 
