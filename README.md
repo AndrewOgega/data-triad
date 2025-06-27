@@ -1,10 +1,14 @@
-# Credit Card Default Prediction
+<h1 align="center">Credit Card Default Prediction</h1>
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-00e9ed?logo=fastapi)
-![Streamlit](https://img.shields.io/badge/Streamlit-e06666?logo=streamlit)
-![Docker](https://img.shields.io/badge/Docker-8cc1f0?logo=docker)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ML-brightgreen)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-00e9ed?logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Streamlit-e06666?logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Docker-8cc1f0?logo=docker" alt="Docker">
+  <img src="https://img.shields.io/badge/BigQuery-4285F4?logo=googlebigquery&logoColor=white" alt="BigQuery">
+  <img src="https://img.shields.io/badge/Classification-ML-brightgreen" alt="ML">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
+</p>
 
 ---
 
@@ -25,7 +29,7 @@ An optional **FastAPI** backend and **Streamlit** interface are also included fo
 * **XGBoost, CatBoost, LightGBM** (ML models)
 * **Scikit-learn, Imbalanced-learn** (preprocessing, pipelines)
 * **Google BigQuery** (data source)
-* **Streamlit** *(optional: for frontend interface)*
+* **Streamlit** (for frontend interface)
 
 ---
 
